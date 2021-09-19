@@ -1,0 +1,57 @@
+package Problems2;
+
+import java.util.Scanner;
+
+public class Rectangle {
+
+ static Scanner kboard = new Scanner(System.in);
+
+   private int height;
+   private int width;
+
+    public Rectangle(){
+
+     this.getHeight();
+     this.getWidth();
+
+    }
+
+    public void getHeight(){
+
+     System.out.println("Please enter height of rectangle");
+     height=kboard.nextInt();
+
+    }
+
+    public void getWidth(){
+
+     System.out.println("Please enter width of rectangle");
+     width=kboard.nextInt();
+
+    }
+
+    public int calcArea(){
+
+     int area;
+
+     area=height*width;
+
+     return (area);
+    }
+
+    public String isSquare(){
+
+     String txt= " ";
+
+     txt = (height==width) ? "This is a square" : "This is a rectangle";
+
+     return (txt);
+
+    }
+
+    public void displayAll(){
+
+     System.out.println("height: "+height+" width: "+width+" area: "+calcArea()+" shape: "+isSquare());
+
+    }
+}
